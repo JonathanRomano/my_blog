@@ -5,7 +5,7 @@ import { useState } from 'react'
 export default function Home() {
 
   const [ ano, setAno ] = useState(1)
-  var stringano = 'ano'
+  var stringAno = 'anos'
 
   function adicionar () {
     if (ano < 21){
@@ -19,6 +19,11 @@ export default function Home() {
     }
   }
 
+  if (ano === 1) {
+    stringAno = 'ano'
+  } else if (ano === 21){
+    stringAno = 'anos, nada mais do que isso :)'
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -30,7 +35,7 @@ export default function Home() {
 
         <h1 className={styles.title}>Jonathan Lauxen Romano</h1>
 
-        <p>Brasileiro, casado, {ano} anos</p>
+        <p>Brasileiro, casado, {ano} {stringAno}</p>
 
         <button className={styles.btn} onClick={remover}>
           Menos um ano
