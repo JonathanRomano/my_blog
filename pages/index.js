@@ -1,7 +1,24 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { useState } from 'react'
 
 export default function Home() {
+
+  const [ ano, setAno ] = useState(1)
+  var stringano = 'ano'
+
+  function adicionar () {
+    if (ano < 21){
+      setAno(ano + 1)
+    }
+  }
+
+  function remover () {
+    if (ano > 1){
+      setAno(ano - 1)
+    }
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -10,9 +27,21 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Jonathan Lauxen Romano</h1>
-        <p>Decidi voltar com o meu blog pessoal, a ideia inicial é que seja um curriculo online e que eu coloque meus projetos aqui!</p>
+
+        <h1 className={styles.title}>Jonathan Lauxen Romano</h1>
+
+        <p>Brasileiro, casado, {ano} anos</p>
+
+        <button className={styles.btn} onClick={remover}>
+          Menos um ano
+        </button>
+
+        <button className={styles.btn} onClick={adicionar}>
+          Mais um ano
+        </button>
+
       </main>
+
     </div>
   )
 }
