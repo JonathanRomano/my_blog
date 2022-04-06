@@ -1,3 +1,5 @@
+import styles from '../../styles/Home.module.css'
+
 export async function getServerSideProps(context){
     const slug = context.query.slug
     
@@ -40,9 +42,11 @@ function post_view(props) {
 
     return (
         <>
-            <div>slug: {slug}</div>
-            <div>ta quase!</div>
-            <div>{title}</div>
+            <div className={styles.title}>
+                {
+                    title
+                }
+            </div>
             <p>
                 {
                     text
