@@ -17,6 +17,11 @@
   text-align: center;
 }
 
+.text {
+  margin: 3vw 15vw;
+  color: #2d669d  
+}
+
 .btn {
   color: #d2e8ff;
   background-color: #4191e1;
