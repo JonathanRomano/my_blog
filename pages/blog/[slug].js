@@ -1,14 +1,53 @@
-import { useRouter } from "next/router";
-
-function post_view() {
+export async function getServerSideProps(context){
+    const slug = context.query.slug
     
-    const router = useRouter()
-    const slug = router.query.slug
+    const { MongoClient } = require('mongodb')
+
+    const mongo_user = process.env.MONGO_DB_USER
+    const mongo_password = process.env.MONGO_DB_PASSWORD
+    
+    const mongo_uri = "mongodb+srv://"+mongo_user+":"+mongo_password+"@cluster0.szi09.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
+    const client = new MongoClient(mongo_uri, {useNewUrlParser: true})
+
+    async function findOneBySlug(client, slugToSearch){
+        await client.connect()
+        const result = await client.db("Cluster0").collection("blog_collection").findOne({slug: slugToSearch})
+        if (result){
+            return result
+        } else {
+            return "não_encontrado"
+        }
+    }
+
+    const result = await findOneBySlug(client, slug)
+
+    delete result._id
+
+    return {
+        props: {
+            slug: slug,
+            result: result
+        }
+    }
+}
+
+function post_view(props) {
+    
+    const slug = props.result.slug
+    const title = props.result.title
+    const text = props.result.text
 
     return (
         <>
             <div>slug: {slug}</div>
             <div>ta quase!</div>
+            <div>{title}</div>
+            <p>
+                {
+                    text
+                }
+            </p>
         </>
     )
 }
