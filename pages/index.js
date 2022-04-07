@@ -39,12 +39,14 @@ export default function Home(props) {
             <Head>
                 <title>Jonathan Lauxen Romano</title>
                 <meta name="description" content="Programador iniciante em busca de novas aventuras!" />
+                <meta charSet="utf-8"/>
             </Head>
 
+
             <main>
-                <h1 className={styles.title}>Jonathan Lauxen Romano</h1>
-                
-                <h1 className={styles.title2}>Experiências profissionais</h1><hr/>
+                <div className={styles.title}>
+                    <h1>Jonathan Lauxen Romano</h1>
+                </div>
 
                 {experienceArray.map(item => <ExperienceCard experienceObject={item} />)}
 
