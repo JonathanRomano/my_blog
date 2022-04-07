@@ -1,73 +1,71 @@
-.paleta {
+.paleta{
   color: #4169e1;
-  color: #4191e1;
+  color: #4191e1; /* Title */
   color: #2d669d;
   color: #d2e8ff;
   color: #a4d2ff;
 }
 
-.container {
-  margin: 3vw 15vw;
-  color: #2d669d  
+/*
+.btnBox{
+  display: flex;
+  flex-direction: column-reverse;
+}
+*/
+
+.container{
+  margin: 3vw 10vw 0;
 }
 
-.title {
-  color: #2d669d;
-  font-family:cursive;
-  text-align: center;
-  font-size: 5vw;
-}
-
-.text {
-  margin: 3vw 15vw;
-  color: #2d669d  
-}
-
-.btn {
-  color: #d2e8ff;
-  background-color: #4191e1;
-  border-color: #2d669d;
-  height: 2vw;
-  width: 70vw;
-  font-size: 1.2vw;
-}
-
-.company_link{
-  color: #2d669d
-}
-
-.company_link:hover{
+.title{
   color: #4191e1;
-  text-decoration: underline;
+  font-size: 2.5vw;
+  display: flex;
+  justify-content: center;
 }
 
 .experienceCard{
-  color: #2d669d
+  border: solid 1px #a4d2ff;
+  padding: 1vw;
+  margin-top: 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn{
+  color: black;
+  border: none;
+  border-radius: 20px;
+  background-color: #4191e1;
+  align-self: flex-end;
 }
 
 @media only screen and (max-width: 600px) {
-  .btn {
-    color: #d2e8ff;
+  .container{
+    margin: 3vw 2.5vw 0;
+  }
+
+  .title{
+    color: #4191e1;
+    font-size: 3.3vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  .experienceCard{
+    border: solid 1px #a4d2ff;
+    padding: 1vw;
+    margin-top: 2vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn{
+    color: black;
+    border: none;
+    border-radius: 20px;
     background-color: #4191e1;
-    border-color: #2d669d;
-    height: 4vw;
-    width: 90vw;
-    font-size: 3vw;
-    padding-bottom: 4vw;
-  }
-  .container {
-    margin: 3vw 5vw;
-    color: #2d669d  
-  }
-  .title {
-    color: #2d669d;
-    font-family:cursive;
-    text-align: center;
-    font-size: 7.2vw;
-  }
-  .title2 {
-    font-size: 6vw;
-    text-align: center;
+    align-self: flex-end;
   }
 }
 
