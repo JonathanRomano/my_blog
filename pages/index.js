@@ -1,30 +1,38 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { useState } from 'react'
+import ExperienceCard from '../src/components/experiencia_card'
 
-export default function Home() {
+export async function getStaticProps(context){
+    const { MongoClient } = require('mongodb')
 
-    const [ ano, setAno ] = useState(1)
-    var stringAno = 'anos'
+    const mongo_user = process.env.MONGO_DB_USER
+    const mongo_password = process.env.MONGO_DB_PASSWORD
+    
+    const mongo_uri = "mongodb+srv://"+mongo_user+":"+mongo_password+"@cluster0.szi09.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
-    function adicionar () {
-        if (ano < 21){
-            setAno(ano + 1)
+    const client = new MongoClient(mongo_uri, {useNewUrlParser: true})
+
+    async function findOneByType(client, type){
+        await client.connect()
+        const result = await client.db("Cluster0").collection("config_collection").findOne({type: type})
+        
+        return result
+    }
+
+    const result = await findOneByType(client, 'site_home_data')
+
+    delete result._id
+
+    return {
+        props: {
+            result: result.data
         }
     }
+}
 
-    function remover () {
-        if (ano > 1){
-            setAno(ano - 1)
-        }
-    }
+export default function Home(props) {
 
-    if (ano === 1) {
-        stringAno = 'ano'
-    }
-    else if (ano === 21){
-        stringAno = 'anos, nada mais do que isso :)'
-    }
+    const experienceArray = props.result.experiences
 
     return (
         <div className={styles.container}>
@@ -34,18 +42,11 @@ export default function Home() {
             </Head>
 
             <main>
-
                 <h1 className={styles.title}>Jonathan Lauxen Romano</h1>
+                
+                <h1>Experiências profissionais</h1><hr/>
 
-                <p>Brasileiro, casado, {ano} {stringAno}</p>
-
-                <button className={styles.btn} onClick={remover}>
-                    Menos um ano
-                </button>
-
-                <button className={styles.btn} onClick={adicionar}>
-                    Mais um ano
-                </button>
+                {experienceArray.map(item => <ExperienceCard experienceObject={item} />)}
 
             </main>
 

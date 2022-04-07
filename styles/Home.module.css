@@ -15,6 +15,7 @@
   color: #2d669d;
   font-family:cursive;
   text-align: center;
+  font-size: 5vw;
 }
 
 .text {
@@ -31,4 +32,17 @@
   margin: 1vw;
   padding: 1vw;
   font-size: 1.2vw;
+}
+
+.company_link{
+  color: #2d669d
+}
+
+.company_link:hover{
+  color: #4191e1;
+  text-decoration: underline;
+}
+
+.experienceCard{
+  color: #2d669d
 }
