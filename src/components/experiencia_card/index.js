@@ -43,7 +43,7 @@ const ExperienceCard = ({experienceObject}) => {
     } else {
         body = <div>
             <p>
-                {experienceObject.occupation} em {experienceObject.company_name}
+                {experienceObject.occupation} em <a className={styles.company_link} href={experienceObject.company_site_link} target='_blank'>{experienceObject.company_name}</a>
             </p>
             <button className={styles.btn} onClick={button_test_function}>Ver mais</button>
         </div>

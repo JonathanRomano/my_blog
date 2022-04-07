@@ -27,10 +27,8 @@
   color: #d2e8ff;
   background-color: #4191e1;
   border-color: #2d669d;
-  height: 4vw;
-  width: 32vw;
-  margin: 1vw;
-  padding: 1vw;
+  height: 2vw;
+  width: 70vw;
   font-size: 1.2vw;
 }
 
@@ -46,3 +44,30 @@
 .experienceCard{
   color: #2d669d
 }
+
+@media only screen and (max-width: 600px) {
+  .btn {
+    color: #d2e8ff;
+    background-color: #4191e1;
+    border-color: #2d669d;
+    height: 4vw;
+    width: 90vw;
+    font-size: 3vw;
+    padding-bottom: 4vh;
+  }
+  .container {
+    margin: 3vw 5vw;
+    color: #2d669d  
+  }
+  .title {
+    color: #2d669d;
+    font-family:cursive;
+    text-align: center;
+    font-size: 7vw;
+  }
+  .title2 {
+    font-size: 6vw;
+    text-align: center;
+  }
+}
+

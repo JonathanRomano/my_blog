@@ -46,7 +46,7 @@ export default function Home(props) {
             <main>
                 <h1 className={styles.title}>Jonathan Lauxen Romano</h1>
                 
-                <h1>Experiências profissionais</h1><hr/>
+                <h1 className={styles.title2}>Experiências profissionais</h1><hr/>
 
                 {experienceArray.map(item => <ExperienceCard experienceObject={item} />)}
 
