@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import ExperienceCard from '../src/components/experiencia_card'
+import { useState } from 'react'
+
 
 export async function getStaticProps(context){
     const { MongoClient } = require('mongodb')
