@@ -53,7 +53,7 @@
     height: 4vw;
     width: 90vw;
     font-size: 3vw;
-    padding-bottom: 4vh;
+    padding-bottom: 4vw;
   }
   .container {
     margin: 3vw 5vw;
@@ -63,7 +63,7 @@
     color: #2d669d;
     font-family:cursive;
     text-align: center;
-    font-size: 7vw;
+    font-size: 7.2vw;
   }
   .title2 {
     font-size: 6vw;
