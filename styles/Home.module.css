@@ -107,10 +107,10 @@
   }
   .socialMediaBox{
     display: flex;
-    margin-top: 7vw;
+    margin-top: 14vw;
     justify-content: space-between;
     margin-bottom: 140vw;
-    padding: 0 35vw;
+    padding: 0 25vw;
   }
   
   .socialMediaIcon {
