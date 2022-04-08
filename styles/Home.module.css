@@ -15,45 +15,79 @@
 
 .container{
   margin: 3vw 10vw 0;
+  text-align: justify;
 }
 
 .title{
-  color: #4191e1;
+  color: #38b6ff;
   font-size: 2.5vw;
   display: flex;
   justify-content: center;
 }
 
 .experienceCard{
-  border: solid 1px #a4d2ff;
+  border-bottom: solid 1px #38b6ff;
   padding: 1vw;
   margin-top: 2vw;
   display: flex;
   justify-content: space-between;
+  transition: .5s;
+}
+
+.company_link{
+  color: #38b6ff
+}
+.company_link:hover{
+  text-decoration: underline;
 }
 
 .btn{
   color: black;
   border: none;
   border-radius: 20px;
-  background-color: #4191e1;
+  background-color: white;
   align-self: flex-end;
 }
+.myPic{
+  width: 15vw;
+  margin: 2vw 0vw 4vw;
+}
 
-@media only screen and (max-width: 600px) {
+.imageBox{
+  display: flex;
+  justify-content: center;
+}
+
+.socialMediaBox{
+  display: flex;
+  margin-top: 7vw;
+  justify-content: space-between;
+  margin-bottom: 140vw;
+  padding: 0 30vw;
+}
+
+.socialMediaIcon {
+    filter: invert(100%);
+    max-width: 2vw;
+    transition: .5s;
+}
+.socialMediaIcon:hover{
+  max-width: 3vw;
+  transition: .5s;
+}
+@media only screen and (max-width: 700px) {
   .container{
     margin: 3vw 2.5vw 0;
   }
 
   .title{
-    color: #4191e1;
+    color: #38b6ff;
     font-size: 3.3vw;
     display: flex;
     justify-content: center;
   }
 
   .experienceCard{
-    border: solid 1px #a4d2ff;
     padding: 1vw;
     margin-top: 2vw;
     display: flex;
@@ -64,8 +98,28 @@
     color: black;
     border: none;
     border-radius: 20px;
-    background-color: #4191e1;
+    background-color: white;
     align-self: flex-end;
+  }
+  .myPic{
+    width: 30vw;
+  }
+  .socialMediaBox{
+    display: flex;
+    margin-top: 7vw;
+    justify-content: space-between;
+    margin-bottom: 140vw;
+    padding: 0 35vw;
+  }
+  
+  .socialMediaIcon {
+      filter: invert(100%);
+      max-width: 3vw;
+      transition: .5s;
+  }
+  .socialMediaIcon:hover{
+    max-width: 5vw;
+    transition: .5s;
   }
 }
 
