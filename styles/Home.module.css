@@ -114,12 +114,11 @@
   
   .socialMediaIcon {
       filter: invert(100%);
-      max-width: 3vw;
-      transition: .5s;
+      max-width: 5vw;
+
   }
   .socialMediaIcon:hover{
     max-width: 5vw;
-    transition: .5s;
   }
 }
 
