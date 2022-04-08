@@ -89,6 +89,7 @@
 
   .experienceCard{
     padding: 1vw;
+    padding-bottom: 3vw;
     margin-top: 2vw;
     display: flex;
     justify-content: space-between;

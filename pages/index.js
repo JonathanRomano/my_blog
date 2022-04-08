@@ -67,10 +67,10 @@ export default function Home(props) {
                 {experienceArray.map(item => <ExperienceCard experienceObject={item} />)}
 
                 <div className={styles.socialMediaBox}>
-                    
+
                     <div className={styles.socialMediaIcon}>
-                        <a href="https://instagram.com/jonathan_lauxen_?igshid=YmMyMTA2M2Y=" target="_blank">
-                            <Image src={instagram} />
+                        <a href="https://github.com/JonathanRomano" target="_blank">
+                            <Image src={github} />
                         </a>
                     </div>
 
@@ -81,8 +81,8 @@ export default function Home(props) {
                     </div>
 
                     <div className={styles.socialMediaIcon}>
-                        <a href="https://github.com/JonathanRomano" target="_blank">
-                            <Image src={github} />
+                        <a href="https://instagram.com/jonathan_lauxen_?igshid=YmMyMTA2M2Y=" target="_blank">
+                            <Image src={instagram} />
                         </a>
                     </div>
 
