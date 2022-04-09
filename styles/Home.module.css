@@ -128,10 +128,12 @@
 
   .socialMediaBox{
     display: flex;
+    flex: 1;
     margin-top: 14vw;
     justify-content: space-between;
     margin-bottom: 140vw;
     padding: 0 25vw;
+    margin-top: 50vh;
   }
   
   .socialMediaIcon {
