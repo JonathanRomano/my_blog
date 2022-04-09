@@ -133,7 +133,7 @@
     justify-content: space-between;
     margin-bottom: 140vw;
     padding: 0 25vw;
-    margin-top: 50vh;
+    margin-top: 30vh;
   }
   
   .socialMediaIcon {
@@ -149,7 +149,7 @@
   .menuBox{
     display: flex;
     flex-direction: column;
-    margin: 10vw 0vw 0vw 30vw;
+    margin: 30vw 0vw 0vw 30vw;
     
   }
 
