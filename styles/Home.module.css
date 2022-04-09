@@ -50,6 +50,7 @@
 .company_link{
   color: #38b6ff
 }
+
 .company_link:hover{
   text-decoration: underline;
 }
@@ -64,6 +65,7 @@
   align-self: flex-end;
   font-size: 2vw;
 }
+
 .myPic{
   width: 15vw;
   margin: 2vw 0vw 4vw;
@@ -81,7 +83,7 @@
   padding: 0 30vw;
 }
 
-.socialMediaIcon {
+.socialMediaIcon{
     filter: invert(100%);
     max-width: 2vw;
     transition: .5s;
@@ -123,6 +125,7 @@
   .myPic{
     width: 30vw;
   }
+
   .socialMediaBox{
     display: flex;
     margin-top: 14vw;
@@ -136,7 +139,27 @@
       max-width: 5vw;
 
   }
+
   .socialMediaIcon:hover{
     max-width: 5vw;
   }
+
+  .menuBox{
+    display: flex;
+    flex-direction: column;
+    margin: 10vw 0vw 0vw 30vw;
+    
+  }
+
+  .menuBtn{
+    margin: 1vw 0vw;
+    background-color: black;
+    color: white;
+    border: solid 1px #38b6ff;
+    border-radius: 30px;
+    font-size: 4vw;
+    text-align: right;
+    padding: 0vw 4vw
+  }
+  
 }

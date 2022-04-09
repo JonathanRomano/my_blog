@@ -18,6 +18,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .postCard{
   border-radius: 20px;
   border: solid 1px #38b6ff;
@@ -28,9 +29,11 @@
   margin: 2vw;
   max-width: 30vw;
 }
+
 .postData{
   align-self: flex-end;
 }
+
 .socialMediaBox{
   display: flex;
   margin: 4vw 0;
