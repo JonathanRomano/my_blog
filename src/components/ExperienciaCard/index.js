@@ -3,7 +3,7 @@ import styles from "../../../styles/Home.module.css"
 
 const ExperienceCard = ({experienceObject}) => {
 
-    const [x, setX] = useState(2)
+    const [x, setX] = useState(1)
 
     function button_test_function(){
         if (x === 1){
@@ -36,7 +36,7 @@ const ExperienceCard = ({experienceObject}) => {
                 </p>
             </div>
             
-            <button className={styles.btn} onClick={button_test_function}>&#9650;</button>
+            <button className={styles.btn} onClick={button_test_function}>&#9651;</button>
         </div>
             
 
@@ -48,7 +48,7 @@ const ExperienceCard = ({experienceObject}) => {
             </div>
             
 
-            <button className={styles.btn} onClick={button_test_function}>&#9660;</button>
+            <button className={styles.btn} onClick={button_test_function}>&#9661;</button>
 
         </div>
     }

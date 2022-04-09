@@ -1,21 +1,34 @@
-.paleta{
-  color: #4169e1;
-  color: #4191e1; /* Title */
-  color: #2d669d;
-  color: #d2e8ff;
-  color: #a4d2ff;
-}
-
-/*
-.btnBox{
-  display: flex;
-  flex-direction: column-reverse;
-}
-*/
 
 .container{
   margin: 3vw 10vw 0;
   text-align: justify;
+}
+
+.curriculoBoxHiden{
+  display: none;
+  transition: 1s;
+}
+
+.curriculoBox{
+  margin: none;
+  transition: 1s;
+}
+
+.menuBox{
+  display: flex;
+  flex-direction: column;
+  margin: 1vw 0vw 0vw 50vw;
+  
+}
+.menuBtn {
+  margin: 1vw;
+  background-color: black;
+  color: white;
+  border: solid 1px #38b6ff;
+  border-radius: 30px;
+  font-size: 3vw;
+  text-align: left;
+  padding: 0vw 4vw
 }
 
 .title{
@@ -45,8 +58,11 @@
   color: black;
   border: none;
   border-radius: 20px;
-  background-color: white;
+  background-color: black;
+  border: none;
+  color: #38b6ff;
   align-self: flex-end;
+  font-size: 2vw;
 }
 .myPic{
   width: 15vw;
@@ -60,9 +76,8 @@
 
 .socialMediaBox{
   display: flex;
-  margin-top: 7vw;
+  margin: 7vw 0;
   justify-content: space-between;
-  margin-bottom: 140vw;
   padding: 0 30vw;
 }
 
@@ -73,8 +88,9 @@
 }
 .socialMediaIcon:hover{
   max-width: 3vw;
-  transition: .5s;
+  transition: 1s;
 }
+
 @media only screen and (max-width: 700px) {
   .container{
     margin: 3vw 2.5vw 0;
@@ -99,8 +115,10 @@
     color: black;
     border: none;
     border-radius: 20px;
-    background-color: white;
     align-self: flex-end;
+    background-color: black;
+    border: none;
+    color: #38b6ff;
   }
   .myPic{
     width: 30vw;
@@ -122,4 +140,3 @@
     max-width: 5vw;
   }
 }
-

@@ -1,12 +1,14 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import ExperienceCard from '../src/components/experiencia_card'
+import ExperienceCard from '../src/components/ExperienciaCard'
 import Image from 'next/image'
 import myPic from '../src/images/eu.jpeg'
 import instagram from '../src/images/instaLogo.png'
 import github from '../src/images/githubLogo.png'
 import linkedin from '../src/images/linkedinLogo.png'
 import whatsapp from '../src/images/whatsappLogo.png'
+import { useState } from 'react'
+import Link from 'next/link'
 
 export async function getStaticProps(context){
     const { MongoClient } = require('mongodb')
@@ -41,6 +43,20 @@ export default function Home(props) {
     const experienceArray = props.result.experiences
     const description = props.result.description
 
+    const [curriculoState, setCurriculoState] = useState(styles.curriculoBoxHiden)
+    const [curriculoBtnText, setCurriculoBtnText] = useState("Currículo")
+
+    function curriculoBoxFunction(){
+        if (curriculoState === styles.curriculoBox){
+            setCurriculoState(styles.curriculoBoxHiden)
+            setCurriculoBtnText("Currículo")
+        } else {
+            setCurriculoState(styles.curriculoBox)
+            setCurriculoBtnText("Ocultar")
+        }
+    
+    }
+
     return (
         <div className={styles.container}>
             <Head>
@@ -53,22 +69,48 @@ export default function Home(props) {
                 <div className={styles.title}>
                     <h1>Jonathan Lauxen Romano</h1>
                 </div>
-                
-                <div className={styles.imageBox}>
-                    <div className={styles.myPic}>
-                        <Image src={myPic}/>
+
+                <div className={curriculoState}>
+
+                    <div className={styles.imageBox}>
+                        <div className={styles.myPic}>
+                            <Image src={myPic}/>
+                        </div>
                     </div>
+
+                    <p>
+                        {description}
+                    </p>
+
+                    {experienceArray.map(item => <ExperienceCard experienceObject={item} />)}
+                    
                 </div>
+
+
+
+                <div className={styles.menuBox}>
+
+                    <button onClick={curriculoBoxFunction} className={styles.menuBtn}>{curriculoBtnText}</button>
+
+                    <button className={styles.menuBtn}>Portfólio</button>
                 
-                <p>
-                    {description}
-                </p>
 
-                {experienceArray.map(item => <ExperienceCard experienceObject={item} />)}
+                    <p className={styles.menuBtn}>
+                        <Link href="/blog">
+                            <a>Sobre mim</a>
+                        </Link>
+                    </p>
+                    
+                    <p className={styles.menuBtn}>
+                        <Link href="/blog">
+                            <a>Blog</a>
+                        </Link>
+                    </p>
+                </div>
 
-                <div className={styles.socialMediaBox}>
 
-                    <div className={styles.socialMediaIcon}>
+                <footer className={styles.socialMediaBox}>
+                <div className={styles.socialMediaIcon}>
                         <a href="https://github.com/JonathanRomano" target="_blank">
                             <Image src={github} />
                         </a>
@@ -91,8 +133,7 @@ export default function Home(props) {
                             <Image src={whatsapp} />
                         </a>
                     </div>
-
-                </div>
+                </footer>
 
             </main>
 
