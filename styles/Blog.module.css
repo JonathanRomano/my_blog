@@ -4,12 +4,25 @@
   text-align: justify;
 }
 
+.headerBox{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 29vw;
+}
+
 .title{
   color: #38b6ff;
   font-size: 5.5vw;
   display: flex;
-  justify-content: center;
   margin-bottom: 4vw;
+}
+
+.backButton{
+  color: #38b6ff;
+  font-size: 5.5vw;
+  display: flex;
+  margin-bottom: 4vw;
+  transform: rotate(180deg)
 }
 
 .postsBox{
@@ -26,8 +39,9 @@
   color: white;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin: 2vw;
-  max-width: 30vw;
+  width: 30vw;
 }
 
 .postData{
@@ -67,6 +81,26 @@
   }
   .socialMediaIcon:hover{
     max-width: 5vw;
+  }
+  .postsBox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .postCard{
+    border-radius: 20px;
+    border: solid 1px #38b6ff;
+    padding: 3vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 2vw;
+    min-width: 100%;
+  }
+
+  .container{
+    margin: 3vw 5vw 0;
+    text-align: justify;
   }
 }
 

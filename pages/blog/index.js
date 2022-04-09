@@ -6,6 +6,7 @@ import instagram from '../../src/images/instaLogo.png'
 import github from '../../src/images/githubLogo.png'
 import linkedin from '../../src/images/linkedinLogo.png'
 import whatsapp from '../../src/images/whatsappLogo.png'
+import Link from "next/link"
 
 export async function getServerSideProps(){
     const { MongoClient } = require('mongodb')
@@ -17,55 +18,35 @@ export async function getServerSideProps(){
 
     const client = new MongoClient(mongo_uri, {useNewUrlParser: true})
 
-    async function findOneByType(client, type){
+    async function findOneByType(client){
         await client.connect()
-        const result = await client.db("Cluster0").collection("config_collection").findOne({type: type})
+
+        const posts = client.db("Cluster0").collection("blog_collection")
         
-        return result
+        const query = { slug: 'primeiro-post' }
+        const options = {
+            projection:{
+                _id: 0,
+                text: 0
+            }
+        }
+
+        const cursor = posts.find(query,options).toArray()
+
+        return cursor
     }
 
-    const result = await findOneByType(client, 'site_home_data')
-
-    delete result._id
+    const result = await findOneByType(client)
 
     return {
         props: {
-            lista_teste: [
-                {
-                    slug:"primeiro-post",
-                    title:"Meu primeiro post",
-                    date:"2022-04-05",
-                    description:"Post teste, mas clica ai pra ver o layout do blog!",
-                    text:"Este post foi upado por um script de python3, e é apenas para fazer um...",
-                },
-                {
-                    slug:"primeiro-post",
-                    title:"Meu primeiro post",
-                    date:"2022-04-05",
-                    description:"Todos os post's vão levar para a mesma pagina, em breve sera um blog grande! kkk",
-                    text:"Este post foi upado por um script de python3, e é apenas para fazer um...",
-                },
-                {
-                    slug:"primeiro-post",
-                    title:"Meu primeiro post",
-                    date:"2022-04-05",
-                    description:"Imagina uma descrição muito boa aqui! é, um dia vai ser assim...",
-                    text:"Este post foi upado por um script de python3, e é apenas para fazer um...",
-                },
-                {
-                    slug:"primeiro-post",
-                    title:"Meu primeiro post",
-                    date:"2022-04-05",
-                    description:"Post teste feito por python3",
-                    text:"Este post foi upado por um script de python3, e é apenas para fazer um...",
-                }
-            ],
+            postsArray: result,
         }
     }
 }
 
 export default function (props) {
-    const lista_de_posts = props.lista_teste
+    const lista_de_posts = props.postsArray
 
     return(
         <div className={styles.container}>
@@ -76,10 +57,19 @@ export default function (props) {
             </Head>
 
             <main>
-                <h1 className={styles.title}>
-                    Blog
-                </h1>
-                
+                <div className={styles.headerBox}>
+
+                    <Link href='/'>
+                        <a className={styles.backButton}>
+                            &#10158;
+                        </a>                    
+                    </Link>
+
+                    <h1 className={styles.title}>
+                        Blog
+                    </h1>
+                </div>
+
                 <div className={styles.postsBox}>
                     {lista_de_posts.map(item => <PostObject postObject={item}/>)}
                 </div>

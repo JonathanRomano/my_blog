@@ -149,8 +149,7 @@
   .menuBox{
     display: flex;
     flex-direction: column;
-    margin: 30vw 0vw 0vw 30vw;
-    
+    margin: 30vw 0vw 0vw 30vw; 
   }
 
   .menuBtn{
