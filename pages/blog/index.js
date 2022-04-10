@@ -23,7 +23,7 @@ export async function getServerSideProps(){
 
         const posts = client.db("Cluster0").collection("blog_collection")
         
-        const query = {}
+        const query = {'type':'normal'}
         const options = {
             projection:{
                 _id: 0,

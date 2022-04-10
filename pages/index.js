@@ -42,7 +42,8 @@ export default function Home(props) {
 
     const experienceArray = props.result.experiences
     const description = props.result.description
-
+    const qualities = props.result.qualities
+    const defects = props.result.defects
     const [curriculoState, setCurriculoState] = useState(styles.curriculoBoxHiden)
     const [curriculoBtnText, setCurriculoBtnText] = useState("Currículo")
 
@@ -79,8 +80,20 @@ export default function Home(props) {
                     </div>
 
                     <p>
-                        {description}
+                        <b>Objetivo: </b>{description}
                     </p>
+                    <br/>
+
+                    <b>Pontos fortes:</b>
+                    <ul>
+                        {qualities.map(item => <li>{item}</li>)}
+                    </ul>
+                    <br/>
+
+                    <b>Pontos a melhorar:</b>
+                    <ul>
+                        {defects.map(item => <li>{item}</li>)}
+                    </ul>
 
                     {experienceArray.map(item => <ExperienceCard experienceObject={item} />)}
                     
@@ -92,8 +105,11 @@ export default function Home(props) {
 
                     <button onClick={curriculoBoxFunction} className={styles.menuBtn}>{curriculoBtnText}</button>
 
-                    <button className={styles.menuBtn}>Portfólio</button>
-                
+                    <p className={styles.menuBtn}>
+                        <Link href="https://github.com/JonathanRomano">
+                            <a>Portfólio</a>
+                        </Link>
+                    </p>
 
                     <p className={styles.menuBtn}>
                         <Link href="/blog">
