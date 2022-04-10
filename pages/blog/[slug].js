@@ -41,18 +41,19 @@ function post_view(props) {
     const text = props.result.text
 
     return (
-        <>
+        <div className={styles.container}>
+        
             <div className={styles.title}>
                 {
                     title
                 }
             </div>
-            <p>
+            <div className={styles.container}>
                 {
                     text
                 }
-            </p>
-        </>
+            </div>
+        </div>
     )
 }
 export default post_view

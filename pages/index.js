@@ -105,23 +105,18 @@ export default function Home(props) {
 
                     <button onClick={curriculoBoxFunction} className={styles.menuBtn}>{curriculoBtnText}</button>
 
-                    <p className={styles.menuBtn}>
-                        <Link href="https://github.com/JonathanRomano">
-                            <a>Portfólio</a>
-                        </Link>
-                    </p>
 
-                    <p className={styles.menuBtn}>
-                        <Link href="/blog">
-                            <a>Sobre mim</a>
-                        </Link>
-                    </p>
-                    
-                    <p className={styles.menuBtn}>
-                        <Link href="/blog">
-                            <a>Blog</a>
-                        </Link>
-                    </p>
+                    <Link href="https://github.com/JonathanRomano">
+                        <a className={styles.menuBtn}>Portfólio</a>
+                    </Link>
+
+                    <Link href="/blog">
+                        <a className={styles.menuBtn}>Sobre mim</a>
+                    </Link>
+
+                    <Link href="/blog">
+                        <a className={styles.menuBtn}>Blog</a>
+                    </Link>
                 </div>
 
 
