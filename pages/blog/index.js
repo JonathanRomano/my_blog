@@ -42,7 +42,7 @@ export async function getStaticProps(context){
         props: {
             postsArray: result,
         },
-        revalidade: 120
+        revalidate: 120
     }
 }
 
