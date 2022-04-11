@@ -8,7 +8,7 @@ import linkedin from '../../src/images/linkedinLogo.png'
 import whatsapp from '../../src/images/whatsappLogo.png'
 import Link from "next/link"
 
-export async function getServerSideProps(){
+export async function getStaticProps(context){
     const { MongoClient } = require('mongodb')
 
     const mongo_user = process.env.MONGO_DB_USER
@@ -41,7 +41,8 @@ export async function getServerSideProps(){
     return {
         props: {
             postsArray: result,
-        }
+        },
+        revalidade: 120
     }
 }
 

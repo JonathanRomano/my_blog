@@ -43,7 +43,6 @@ export default function Home(props) {
     const experienceArray = props.result.experiences
     const description = props.result.description
     const qualities = props.result.qualities
-    const defects = props.result.defects
     const [curriculoState, setCurriculoState] = useState(styles.curriculoBoxHiden)
     const [curriculoBtnText, setCurriculoBtnText] = useState("Currículo")
 
@@ -88,12 +87,6 @@ export default function Home(props) {
                     <ul>
                         {qualities.map(item => <li>{item}</li>)}
                     </ul>
-                    <br/>
-
-                    <b>Pontos a melhorar:</b>
-                    <ul>
-                        {defects.map(item => <li>{item}</li>)}
-                    </ul>
 
                     {experienceArray.map(item => <ExperienceCard experienceObject={item} />)}
                     
@@ -104,7 +97,6 @@ export default function Home(props) {
                 <div className={styles.menuBox}>
 
                     <button onClick={curriculoBoxFunction} className={styles.menuBtn}>{curriculoBtnText}</button>
-
 
                     <Link href="https://github.com/JonathanRomano">
                         <a className={styles.menuBtn}>Portfólio</a>
