@@ -28,7 +28,6 @@ export async function getServerSideProps(context){
 
     return {
         props: {
-            slug: slug,
             result: result
         }
     }
@@ -36,7 +35,6 @@ export async function getServerSideProps(context){
 
 function post_view(props) {
     
-    const slug = props.result.slug
     const title = props.result.title
     const text = props.result.text
 

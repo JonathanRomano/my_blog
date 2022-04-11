@@ -1,14 +1,16 @@
 import styles from "../../styles/Blog.module.css"
 import Head from "next/head"
-import PostObject from "../../src/components/PostObject/index.js"
+import PostObject from "../../src/components/PostObject/"
 import Image from "next/image"
-import instagram from '../../src/images/instaLogo.png'
-import github from '../../src/images/githubLogo.png'
-import linkedin from '../../src/images/linkedinLogo.png'
-import whatsapp from '../../src/images/whatsappLogo.png'
+import * as instagram from '../../src/images/instaLogo.png'
+import * as github from '../../src/images/githubLogo.png'
+import * as linkedin from '../../src/images/linkedinLogo.png'
+import * as whatsapp from '../../src/images/whatsappLogo.png'
+import * as euzinho from '../../src/images/eu.jpeg'
 import Link from "next/link"
+import { GetStaticProps } from "next"
 
-export async function getStaticProps(context){
+export const getStaticProps: GetStaticProps = async () => {
     const { MongoClient } = require('mongodb')
 
     const mongo_user = process.env.MONGO_DB_USER
@@ -41,8 +43,7 @@ export async function getStaticProps(context){
     return {
         props: {
             postsArray: result,
-        },
-        revalidate: 120
+        }
     }
 }
 
@@ -72,7 +73,8 @@ export default function (props) {
                 </div>
 
                 <div className={styles.postsBox}>
-                    {lista_de_posts.map(item => <PostObject postObject={item}/>)}
+                    
+                    {lista_de_posts.map(item => <PostObject postObject={item} postImage={require('../../src/images/' + item.slug + '.jpeg')}/>)}
                 </div>
 
                 <footer className={styles.socialMediaBox}>
