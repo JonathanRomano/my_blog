@@ -74,7 +74,7 @@ export default function (props) {
 
                 <div className={styles.postsBox}>
                     
-                    {lista_de_posts.map(item => <PostObject postObject={item} postImage={require('../../src/images/' + item.slug + '.jpeg')}/>)}
+                    {lista_de_posts.map(item => <PostObject postObject={item} postImage={require('../../src/images/' + item.slug + '.png')}/>)}
                 </div>
 
                 <footer className={styles.socialMediaBox}>
