@@ -36,10 +36,6 @@ const PostObject = ({postObject, postImage}) => {
                     
                     <Image src={postImage} />
 
-                    <h1>
-                        {postObject.title}
-                    </h1>
-
                     <p>
                         {postObject.description}
                     </p>
