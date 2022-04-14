@@ -74,7 +74,7 @@ export default function Home(props) {
 
                     <div className={styles.imageBox}>
                         <div className={styles.myPic}>
-                            <Image src={myPic} className={styles.myPic}/>
+                            <Image src={myPic}/>
                         </div>
                     </div>
 
