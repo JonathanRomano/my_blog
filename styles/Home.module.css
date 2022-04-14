@@ -24,8 +24,8 @@
   margin: 1vw;
   background-color: black;
   color: white;
-  border: solid 1px #38b6ff;
-  border-radius: 30px;
+  border: none;
+  border-bottom: solid 1px #38b6ff;
   font-size: 3vw;
   text-align: left;
   padding: 0vw 4vw
@@ -36,6 +36,9 @@
   font-size: 2.5vw;
   display: flex;
   justify-content: center;
+  background: -webkit-linear-gradient(bottom,black,40%, #1b9ce7,white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .experienceCard{
@@ -58,7 +61,6 @@
 .btn{
   color: black;
   border: none;
-  border-radius: 20px;
   background-color: black;
   border: none;
   color: #38b6ff;
@@ -69,6 +71,7 @@
 .myPic{
   width: 15vw;
   margin: 2vw 0vw 4vw;
+  border-radius: 50%;
 }
 
 .imageBox{
