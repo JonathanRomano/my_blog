@@ -54,7 +54,7 @@ export default function (props) {
         <div className={styles.container}>
             <Head>
                 <title>Jonathan Lauxen Romano</title>
-                <meta name="description" content="Programador iniciante em busca de novas aventuras!" />
+                <meta name="description" content="Programador iniciante em busca de novas aventuras." />
                 <meta charSet="utf-8"/>
             </Head>
 
