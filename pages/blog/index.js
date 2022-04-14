@@ -1,6 +1,6 @@
 import styles from "../../styles/Blog.module.css"
 import Head from "next/head"
-import PostObject from "../../src/components/PostObject/"
+import PostObject from "../../src/components/PostObject"
 import Image from "next/image"
 import * as instagram from '../../src/images/instaLogo.png'
 import * as github from '../../src/images/githubLogo.png'
@@ -10,13 +10,13 @@ import * as euzinho from '../../src/images/eu.jpeg'
 import Link from "next/link"
 import { GetStaticProps } from "next"
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps = async () => {
     const { MongoClient } = require('mongodb')
 
     const mongo_user = process.env.MONGO_DB_USER
     const mongo_password = process.env.MONGO_DB_PASSWORD
     
-    const mongo_uri = "mongodb+srv://"+mongo_user+":"+mongo_password+"@cluster0.szi09.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+        const mongo_uri = "mongodb+srv://"+mongo_user+":"+mongo_password+"@cluster0.szi09.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
     const client = new MongoClient(mongo_uri, {useNewUrlParser: true})
 
@@ -43,7 +43,8 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
         props: {
             postsArray: result,
-        }
+        },
+        revalidate: 120
     }
 }
 
