@@ -1,0 +1,30 @@
+.box {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 4rem 1rem;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    transition: .5s;
+} 
+.title:hover{
+    color: #38b6ff;
+    transition: .5s;
+}
+
+.itens {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+} 
+.item{
+    font-weight: bold;
+    transition: .2s;
+}
+.item:hover{
+    font-weight: bold;
+    transition: .5s;
+    color: #38b6ff;
+}

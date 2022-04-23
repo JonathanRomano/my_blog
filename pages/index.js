@@ -10,7 +10,7 @@ import whatsapp from '../src/images/whatsappLogo.png'
 import { useState } from 'react'
 import Link from 'next/link'
 
-export async function getStaticProps(context){
+export async function getStaticProps(){
     const { MongoClient } = require('mongodb')
 
     const mongo_user = process.env.MONGO_DB_USER

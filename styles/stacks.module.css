@@ -1,0 +1,50 @@
+.img {
+    min-height: 100vh;
+    background-image: url('../src/images/universe.jpg');
+    background-size: cover;
+}
+
+.layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    opacity: 0.1;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+
+}
+
+
+/* external css: flickity.css */
+
+.gallery {
+    background: #EEE;
+}
+
+.galleryCell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+}
+
+    /* cell number */
+.galleryCell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}
+  
+  
