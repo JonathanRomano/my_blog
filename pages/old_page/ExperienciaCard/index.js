@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import styles from "../oldPage.module.css"
 
-const ExperienceCard = (experienceObject) => {
+const ExperienceCard = ({experienceObject}) => {
 
     const [x, setX] = useState(1)
 
