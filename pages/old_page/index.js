@@ -32,7 +32,8 @@ export async function getStaticProps(){
     delete result._id
 
     console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
-    console.log(result['experiences'])
+    console.log(result.experiences)
+    result.experiences.map(item => console.log(item))
     console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
 
     return {
