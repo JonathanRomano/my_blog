@@ -92,7 +92,7 @@ export default function Home(props) {
                         {qualities.map(item => <li>{item}</li>)}
                     </ul>
 
-                    {experienceArray.map(item => <ExperienceCard experienceObject={item} />)}
+                    {experienceArray.map(item => <ExperienceCard experienceObject={item} key={item.occupation} />)}
                     
                 </div>
 
