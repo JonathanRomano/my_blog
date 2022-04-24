@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from './oldPage.module.css'
+import styles from '../../styles/oldPage.module.css'
 import ExperienceCard from '../../src/components/ExperienciaCard'
 import Image from 'next/image'
 import myPic from '../../src/images/eu.jpeg'
