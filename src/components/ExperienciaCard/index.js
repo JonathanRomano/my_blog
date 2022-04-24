@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import styles from "../oldPage.module.css"
+import styles from "../../../styles/oldPage.module.css"
 
 const ExperienceCard = ({experienceObject}) => {
 
