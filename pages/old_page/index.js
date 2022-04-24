@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from './oldPage.module.css'
-import ExperienceCard from './_ExperienciaCard'
+import ExperienceCard from '../../src/components/ExperienciaCard'
 import Image from 'next/image'
 import myPic from '../../src/images/eu.jpeg'
 import instagram from '../../src/images/instaLogo.png'
