@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from './oldPage.module.css'
-import ExperienceCard from './ExperienciaCard'
+import ExperienceCard from './_ExperienciaCard'
 import Image from 'next/image'
 import myPic from '../../src/images/eu.jpeg'
 import instagram from '../../src/images/instaLogo.png'
@@ -30,11 +30,7 @@ export async function getStaticProps(){
     const result = await findOneByType(client, 'site_home_data')
 
     delete result._id
-
-    console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
-    console.log(result.experiences)
-    console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
-
+    
     return {
         props: {
             result: result.data,
