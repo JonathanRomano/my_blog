@@ -6,7 +6,9 @@ const Card = () => {
             <h2>Fullstack developer</h2>
             <h1>Seja bem vindo(a)</h1>
             <p>Esse é meu universo, aqui eu exponho alguns dos meus projetos e minhas experiências como desenvolvedor <strong>fullstack.</strong> Bora trocar conhecimentos?!</p>
-            <button>MY CV</button>
+
+                <button className={styles.cvButton}>MY CV</button>
+                
         </div>
     </>)
 }

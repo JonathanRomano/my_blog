@@ -27,12 +27,12 @@
     max-width: 600px;
     padding: 50px;
     min-height: 350px;
-    background: black;
-    color:white;
+    background: rgba(255, 255, 255, 0.65);
+    color:black;
 }
 .box h1{
     padding: 10px 30px 10px 10px;
-    color: white;
+    color: black;
     line-height: 3px;
 }
 

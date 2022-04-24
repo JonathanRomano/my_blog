@@ -56,13 +56,13 @@ const StackCarousel = ({stackArray}) => {
     return <div className={styles.container}>
         <div className={styles.carousel}>
             <button onClick={leftClick}>
-                {'<'}
+                &#8249;
             </button>
             <div>
                 <StackCard stackObject={stackArray[atual - 1]}/>
             </div>
             <button onClick={rightClick}>
-                {'>'}
+                &#8250;
             </button>
         </div>
     </div>

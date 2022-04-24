@@ -1,167 +1,31 @@
-
+.img {
+    min-height: 100vh;
+    background-image: url('../src/images/universe2.jpeg');
+    background-size: cover;
+}
+.layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*background: -webkit-linear-gradient(left, #1b9ce7, rgb(13, 54, 141), rgb(8, 35, 4));*/
+    background-color: black;
+    opacity: .3;
+    min-height: 100vh;
+    min-width: 100vw;
+}
 .container{
-  margin: 3vw 10vw 0;
-  text-align: justify;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+
 }
 
-.curriculoBoxHiden{
-  display: none;
-  transition: 1s;
-}
-
-.curriculoBox{
-  margin: none;
-  transition: 1s;
-}
-
-.menuBox{
-  display: flex;
-  flex-direction: column;
-  margin: 1vw 0vw 0vw 50vw;
-  
-}
-.menuBtn {
-  margin: 1vw;
-  background-color: black;
-  color: white;
-  border: solid 1px #38b6ff;
-  border-radius: 30px;
-  font-size: 3vw;
-  text-align: left;
-  padding: 0vw 4vw
-}
-
-.title{
-  color: #38b6ff;
-  font-size: 2.5vw;
-  display: flex;
-  justify-content: center;
-}
-
-.experienceCard{
-  border-bottom: solid 1px #38b6ff;
-  padding: 1vw;
-  margin-top: .5vw;
-  display: flex;
-  justify-content: space-between;
-  transition: .5s;
-}
-
-.company_link{
-  color: #38b6ff
-}
-
-.company_link:hover{
-  text-decoration: underline;
-}
-
-.btn{
-  color: black;
-  border: none;
-  border-radius: 20px;
-  background-color: black;
-  border: none;
-  color: #38b6ff;
-  align-self: flex-end;
-  font-size: 2vw;
-}
-
-.myPic{
-  width: 15vw;
-  margin: 2vw 0vw 4vw;
-}
-
-.imageBox{
-  display: flex;
-  justify-content: center;
-}
-
-.socialMediaBox{
-  display: flex;
-  margin: 7vw 0;
-  justify-content: space-between;
-  padding: 0 30vw;
-}
-
-.socialMediaIcon{
-    filter: invert(100%);
-    max-width: 2vw;
-    transition: .5s;
-}
-.socialMediaIcon:hover{
-  max-width: 3vw;
-  transition: 1s;
-}
-
-@media only screen and (max-width: 700px) {
-  .container{
-    margin: 3vw 2.5vw 0;
-  }
-
-  .title{
-    color: #38b6ff;
-    font-size: 3.3vw;
-    display: flex;
-    justify-content: center;
-    margin-top: 15vw;
-  }
-
-  .experienceCard{
-    padding: 1vw;
-    padding-bottom: 3vw;
-    margin-top: 2vw;
+.box {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .btn{
-    color: black;
-    border: none;
-    border-radius: 20px;
-    align-self: flex-end;
-    background-color: black;
-    border: none;
-    color: #38b6ff;
-  }
-  .myPic{
-    width: 30vw;
-  }
-
-  .socialMediaBox{
-    display: flex;
-    flex: 1;
-    margin-top: 14vw;
-    justify-content: space-between;
-    margin-bottom: 140vw;
-    padding: 0 25vw;
-    margin-top: 30vh;
-  }
-  
-  .socialMediaIcon {
-      filter: invert(100%);
-      max-width: 5vw;
-
-  }
-
-  .socialMediaIcon:hover{
-    max-width: 5vw;
-  }
-
-  .menuBox{
-    display: flex;
-    flex-direction: column;
-    margin: 30vw 0vw 0vw 30vw; 
-  }
-
-  .menuBtn{
-    margin: 1vw 0vw;
-    background-color: black;
-    color: white;
-    border: solid 1px #38b6ff;
-    border-radius: 30px;
-    font-size: 4vw;
-    text-align: right;
-    padding: 0vw 4vw
-  }
-  
+}
+.s{
+    background: -webkit-linear-gradient(left, #1b9ce7, rgb(13, 54, 141), rgb(8, 35, 94));
 }

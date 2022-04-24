@@ -19,12 +19,13 @@
     line-height: 15px;
     padding-left: 5px;
 }
-.cardBox button {
+
+.cvButton {
     align-self: end;
     font-weight: bold;
     font-size: 22;
     border-radius: 20px;
     border: solid 1px black;
-    background-color: rgb(235, 235, 41);
+    background-color: rgba(235, 235, 41);
     padding: 8px 20px;
 }
