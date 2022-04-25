@@ -28,3 +28,43 @@
     transition: .5s;
     color: #38b6ff;
 }
+
+@media only screen and (max-width: 700px) {
+    .box {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem 1rem 1rem;
+        width: 100vw;
+    }
+    
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        transition: .5s;
+        text-align: center;
+    } 
+    .title:hover{
+        color: #38b6ff;
+        transition: .5s;
+    }
+    
+    .itens {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        width: 90%;
+        margin-top: 20px;
+    } 
+    .item{
+        font-size: 14px;
+        font-weight: bold;
+        transition: .2s;
+    }
+    .item:hover{
+        font-weight: bold;
+        transition: .5s;
+        color: #38b6ff;
+    }
+}

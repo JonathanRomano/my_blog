@@ -29,3 +29,34 @@
 .s{
     background: -webkit-linear-gradient(left, #1b9ce7, rgb(13, 54, 141), rgb(8, 35, 94));
 }
+
+@media only screen and (max-width: 700px) {
+    .img {
+        min-height: 100vh;
+        background-image: url('../src/images/universe2.jpeg');
+        background-size: cover;
+    }
+    .layer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        /*background: -webkit-linear-gradient(left, #1b9ce7, rgb(13, 54, 141), rgb(8, 35, 4));*/
+        background-color: black;
+        opacity: .3;
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+    .container{
+        position: absolute;
+        left: 0;
+        top: 0;
+        min-width: 100vw;
+        min-height: 100vh;
+    
+    }
+    
+    .box {
+        display: flex;
+        justify-content: space-between;
+    }
+}
